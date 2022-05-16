@@ -77,13 +77,13 @@ function update_toggle(){
 function secure_design(){
     document.getElementById('topnav').classList.remove("insecure")
     document.getElementById('topnav').classList.add("secure")
-    document.getElementById('mode-text').innerHTML = "Mode: Secure";
+    document.getElementById('mode-text').innerHTML = "Secure";
 }
 
 function insecure_design(){
     document.getElementById('topnav').classList.remove("secure")
     document.getElementById('topnav').classList.add("insecure")
-    document.getElementById('mode-text').innerHTML = "Mode: Insecure";
+    document.getElementById('mode-text').innerHTML = "Vulnerable";
 }
 
 function secure_clients_page(){
