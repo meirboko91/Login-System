@@ -39,7 +39,7 @@ def is_valid_password(password):
     for special_char in req['password_content']['special_characters']:
         count_special_char += password.count(special_char)
 
-    if req['min_length'] == len(password):
+    if req['min_length'] > len(password):
         return False
     if count_digit < req['password_content']['min_length_digit']:
         return False
