@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'users',
     'pages',
     'clients',
-    'django_extensions',
-
+    'django_extensions', #Werkzeug -- runserver_plus cert.pem key.pem
 ]
 
 AUTH_USER_MODEL = 'users.UsersData'
@@ -86,7 +85,7 @@ WSGI_APPLICATION = 'CommunicationLTD.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
+DATABASES = { #mysql-client 
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'commltd',

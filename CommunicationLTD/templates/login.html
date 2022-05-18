@@ -2,6 +2,7 @@
 
 {% block content %}
 
+
 {% if tooManyAttemps %}
 <p style="text-align: center; position: flex;">Too many failed attempts. Contact the administrator</p>
 {% else %}
@@ -28,10 +29,13 @@
 </div>
 
 
-<div id="insecure-form-login">
+
+<div class="row">
+  <div class="container">
+  <div id="insecure-form-login">
   <form method='GET' style="text-align: center; position: flex;">
-    <p style="display:inline;"> Username: </p><input type='text' name='username' required /> <br><br>
-    <p style="display:inline;"> Password: </p><input type='text' name='password' required /> <br><br>
+    <p style="display:inline;"> Username: </p><input type='text' name='username' required /><br><br>
+    <p style="display:inline;"> Password: </p><input type='text' name='password' required/> <br><br>
     {% if badPass %}
     <a style="color:red; text-align: center; position: flex;">Password not matched! Try again!</a><br>
     {% endif %}
@@ -39,9 +43,9 @@
   </form>
   <p style="text-align: center; position: flex;"><a href="/forgot-pwd ">Forgot password?</a></p>
 
+  </div>
 </div>
-
-
+</div>
 {% if users %}
 {% for user in users %}
 

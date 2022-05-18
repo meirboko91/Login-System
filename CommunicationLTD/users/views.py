@@ -277,8 +277,8 @@ def forgot_pwd_view(request):
             html_message = render_to_string('forgot_pwd/password_reset_email.html',
                                             {
                                                 'hashed_code': hashed_code,
-                                                'protocol': 'http',
-                                                'domain': '127.0.0.1:8000',
+                                                'protocol': 'https',
+                                                'domain': 'localhost:8000',
                                                 'url': '/verify-code',
                                             })
             plain_message = strip_tags(html_message)
